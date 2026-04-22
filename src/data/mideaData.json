@@ -3,57 +3,30 @@
     "title": "Midea Regional Growth Intelligence Hub",
     "subtitle": "Propuesta estratégica para Colombia, Ecuador y Venezuela con aprendizajes de México.",
     "updated_at": "2026-04-22",
+    "fx_note": "Todos los valores monetarios en USD. Conversión: 1 USD = 17.26 MXN (22-Abr-2026).",
     "note": "Datos Q1 2026 reales para MX, CO y PE. Ecuador y Venezuela son proyecciones estratégicas."
   },
   "hero_kpis": [
     {
       "label": "ROAS conversión México",
       "value": "20.7×",
-      "detail": "Por cada peso invertido en conversión, México generó 20.7 en ingresos. El modelo funciona."
+      "detail": "Por cada dólar invertido en conversión, México generó 20.7 en ingresos. El modelo funciona."
     },
     {
       "label": "Impresiones generadas en MX",
       "value": "22.7M",
-      "detail": "Solo en Q1, con un funnel de tres capas activo y $336K MXN de inversión."
+      "detail": "Solo en Q1, con un funnel de tres capas activo y $19.5K USD de inversión total."
     },
     {
-      "label": "Oportunidad del clúster",
-      "value": "$6.2M MXN",
-      "detail": "Potencial estimado a 12 meses con CO, EC y VE operando bajo una lógica regional integrada."
-    }
-  ],
-  "context_blocks": [
-    {
-      "title": "La cuenta ya no necesita una agencia que empiece de cero",
-      "body": "Necesita un socio que ya entienda la marca, la operación, los aprendizajes regionales y cómo acelerar la siguiente etapa."
-    },
-    {
-      "title": "Colombia es la prioridad comercial inmediata",
-      "body": "Es el mercado donde ya existe señal de demanda y donde una mejor arquitectura de conversión puede generar impacto más rápido."
-    },
-    {
-      "title": "México nos da una base que nadie nuevo tendría",
-      "body": "Ya contamos con señales reales sobre canales, objetivos, contenidos y estructuras que sí funcionan dentro del ecosistema Midea."
-    }
-  ],
-  "continuity_proof": [
-    {
-      "title": "Conocimiento acumulado de la cuenta",
-      "body": "No partimos de hipótesis. Partimos de aprendizajes concretos en paid media, SEO, tráfico y comercio digital dentro del universo Midea."
-    },
-    {
-      "title": "Visión regional, no localista",
-      "body": "Hemos visto patrones comparables entre México, Colombia, Perú y LATAM. Eso permite tomar mejores decisiones para el nuevo clúster."
-    },
-    {
-      "title": "Continuidad sin pérdida de velocidad",
-      "body": "Cambiar de agencia implicaría reiniciar contexto, narrativa, benchmarks y lógica de optimización. Seguir con nosotros preserva velocidad y criterio."
+      "label": "Potencial del clúster",
+      "value": "~$359K USD",
+      "detail": "Escenario estimado a 12 meses con CO, EC y VE bajo una lógica regional. Proyección modelada, no garantizada."
     }
   ],
   "pain_points": [
     {
       "title": "La demanda ya existe, pero no está capitalizada",
-      "detail": "Colombia captura tráfico eficiente con un CPC de $0.12, pero todavía no opera con una estructura de conversión que cierre el ciclo.",
+      "detail": "Colombia captura tráfico eficiente con un CPC muy bajo, pero todavía no opera con una estructura de conversión que cierre el ciclo.",
       "impact": "Oportunidad: activar la capa de conversión sobre una base ya eficiente"
     },
     {
@@ -63,71 +36,48 @@
     },
     {
       "title": "Cada mercado opera en aislamiento",
-      "detail": "Sin una capa regional de inteligencia, cada mercado aprende más lento, duplica esfuerzos y pierde eficiencia en la asignación.",
+      "detail": "Sin una capa regional de inteligencia, cada mercado aprende más lento y pierde eficiencia en la asignación.",
       "impact": "Oportunidad: unificar reporting y decisión para los tres países del clúster"
-    }
-  ],
-  "q1_kpi_summary": [
-    {
-      "country": "MX",
-      "investment_mxn": 336212,
-      "consideration_cpc_mxn": 0.45,
-      "conversion_cpa_mxn": 3.65,
-      "key_insight": "México ya opera como un sistema maduro: awareness, consideration y conversion trabajan juntos."
-    },
-    {
-      "country": "CO",
-      "investment_mxn": 28505,
-      "consideration_cpc_mxn": 0.12,
-      "conversion_cpa_mxn": null,
-      "key_insight": "Colombia tiene muy buena eficiencia para capturar intención, pero aún no está diseñada para cerrar valor."
-    },
-    {
-      "country": "PE",
-      "investment_mxn": 25958,
-      "consideration_cpc_mxn": 1.13,
-      "conversion_cpa_mxn": null,
-      "key_insight": "Perú sirve como contraste: cuando la estructura no acompaña, el costo por resultado se deteriora."
     }
   ],
   "paid_media_country": [
     {
       "country": "CO",
-      "planned_budget_mxn": 36000,
-      "executed_budget_mxn": 28505,
+      "planned_budget_usd": 2086,
+      "executed_budget_usd": 1652,
       "budget_execution_pct": 0.7918,
       "campaigns": 9,
       "impressions": 1140734,
       "clicks": 33889,
       "ctr": 0.0297,
-      "avg_cpc_mxn": 0.84,
-      "revenue_mxn": 0,
+      "avg_cpc_usd": 0.049,
+      "revenue_usd": 0,
       "roas": null
     },
     {
       "country": "MX",
-      "planned_budget_mxn": 504400,
-      "executed_budget_mxn": 336212,
+      "planned_budget_usd": 29224,
+      "executed_budget_usd": 19479,
       "budget_execution_pct": 0.6666,
       "campaigns": 30,
       "impressions": 22730224,
       "clicks": 218753,
       "ctr": 0.0096,
-      "avg_cpc_mxn": 1.54,
-      "revenue_mxn": 4381158,
+      "avg_cpc_usd": 0.089,
+      "revenue_usd": 253833,
       "roas": 13.03
     },
     {
       "country": "PE",
-      "planned_budget_mxn": 36000,
-      "executed_budget_mxn": 25958,
+      "planned_budget_usd": 2086,
+      "executed_budget_usd": 1504,
       "budget_execution_pct": 0.7211,
       "campaigns": 9,
       "impressions": 701393,
       "clicks": 10361,
       "ctr": 0.0148,
-      "avg_cpc_mxn": 2.51,
-      "revenue_mxn": 0,
+      "avg_cpc_usd": 0.145,
+      "revenue_usd": 0,
       "roas": null
     }
   ],
@@ -135,183 +85,70 @@
     {
       "country": "MX",
       "objective": "Awareness",
-      "spend_mxn": 53203,
+      "spend_usd": 3082,
       "results": 6028025,
-      "cpc_mxn": 2.06,
-      "cost_per_result_mxn": 0.01,
+      "cpc_usd": 0.119,
+      "cost_per_result_usd": 0.001,
       "roas": null
     },
     {
       "country": "MX",
       "objective": "Consideration",
-      "spend_mxn": 71214,
+      "spend_usd": 4126,
       "results": 156591,
-      "cpc_mxn": 1.45,
-      "cost_per_result_mxn": 0.45,
+      "cpc_usd": 0.084,
+      "cost_per_result_usd": 0.026,
       "roas": null
     },
     {
       "country": "MX",
       "objective": "Conversion",
-      "spend_mxn": 211795,
+      "spend_usd": 12271,
       "results": 58060,
-      "cpc_mxn": 1.47,
-      "cost_per_result_mxn": 3.65,
+      "cpc_usd": 0.085,
+      "cost_per_result_usd": 0.21,
       "roas": 20.69,
       "roas_label": "20.69×"
     },
     {
       "country": "CO",
       "objective": "Consideration",
-      "spend_mxn": 28505,
+      "spend_usd": 1652,
       "results": 246792,
-      "cpc_mxn": 0.84,
-      "cost_per_result_mxn": 0.12,
+      "cpc_usd": 0.049,
+      "cost_per_result_usd": 0.007,
       "roas": null
     }
   ],
-  "web_traffic_country": [
-    {
-      "country": "CO",
-      "sessions": 11722,
-      "users": 9718,
-      "new_users": 6653,
-      "pageviews": 29677,
-      "pages_per_session": 2.53,
-      "bounce_rate": 0.2606,
-      "avg_session_duration_sec": 278.4
-    },
-    {
-      "country": "MX",
-      "sessions": 62308,
-      "users": 55784,
-      "new_users": 35538,
-      "pageviews": 202827,
-      "pages_per_session": 3.26,
-      "bounce_rate": 0.2108,
-      "avg_session_duration_sec": 1063.6
-    },
-    {
-      "country": "PE",
-      "sessions": 6369,
-      "users": 5208,
-      "new_users": 3473,
-      "pageviews": 13905,
-      "pages_per_session": 2.18,
-      "bounce_rate": 0.1329,
-      "avg_session_duration_sec": 3271
-    }
-  ],
   "web_top_sources": [
-    { "country": "CO", "source": "Paid Search", "sessions": 7053, "share_of_sessions": 0.6017 },
+    { "country": "CO", "source": "Paid Search",    "sessions": 7053, "share_of_sessions": 0.6017 },
     { "country": "CO", "source": "Organic Search", "sessions": 3442, "share_of_sessions": 0.2936 },
-    { "country": "CO", "source": "Direct", "sessions": 970, "share_of_sessions": 0.0828 },
-    { "country": "MX", "source": "Organic Search", "sessions": 25757, "share_of_sessions": 0.4134 },
-    { "country": "MX", "source": "Direct", "sessions": 16004, "share_of_sessions": 0.2569 }
+    { "country": "CO", "source": "Direct",         "sessions": 970,  "share_of_sessions": 0.0828 }
   ],
   "seo_country": [
-    {
-      "country": "CO",
-      "keywords_tracked": 100,
-      "top10_keywords": 37,
-      "top10_share": 0.37,
-      "avg_position": 26.54,
-      "estimated_traffic": 7665,
-      "search_volume": 248840
-    },
-    {
-      "country": "MX",
-      "keywords_tracked": 100,
-      "top10_keywords": 93,
-      "top10_share": 0.93,
-      "avg_position": 3.82,
-      "estimated_traffic": 45114,
-      "search_volume": 1843490
-    },
-    {
-      "country": "PE",
-      "keywords_tracked": 100,
-      "top10_keywords": 29,
-      "top10_share": 0.29,
-      "avg_position": 23.22,
-      "estimated_traffic": 5411,
-      "search_volume": 143790
-    }
+    { "country": "CO", "top10_keywords": 37,  "top10_share": 0.37, "avg_position": 26.54, "estimated_traffic": 7665  },
+    { "country": "MX", "top10_keywords": 93,  "top10_share": 0.93, "avg_position": 3.82,  "estimated_traffic": 45114 },
+    { "country": "PE", "top10_keywords": 29,  "top10_share": 0.29, "avg_position": 23.22, "estimated_traffic": 5411  }
   ],
   "ecommerce_mx_channels": [
-    { "channel": "Amazon", "revenue_mxn": 3131395, "orders": 1865, "aov_mxn": 1679.03 },
-    { "channel": "Mercado Libre", "revenue_mxn": 8105407, "orders": 4214, "aov_mxn": 1923.45 },
-    { "channel": "Walmart", "revenue_mxn": 7843816, "orders": 2201, "aov_mxn": 3563.75 }
-  ],
-  "colombia_case": {
-    "headline": "Colombia ya muestra eficiencia en captura de demanda. El siguiente paso es convertir esa eficiencia en crecimiento defendible.",
-    "opportunities": [
-      "Diseñar un funnel más completo, no solo campañas de consideración.",
-      "Conectar Paid Search con contenido, SEO, experiencia web y rutas de conversión.",
-      "Usar aprendizajes de México para priorizar categorías, creatividades y arquitectura digital."
-    ],
-    "signals": [
-      { "label": "Share de sesiones por Paid Search", "value": "60%" },
-      { "label": "CPC de consideración", "value": "$0.12 MXN" },
-      { "label": "Top 10 share SEO", "value": "37%" }
-    ]
-  },
-  "opportunity_areas": [
-    {
-      "title": "Escalar Colombia con lógica full-funnel",
-      "value": "+$2.4M MXN",
-      "detail": "Convertir la eficiencia actual de consideración en una operación con mayor profundidad de awareness y cierre."
-    },
-    {
-      "title": "Transferir aprendizajes de México",
-      "value": "Menor curva",
-      "detail": "Acelerar decisiones creativas, de pauta, SEO y commerce con base en resultados reales ya observados."
-    },
-    {
-      "title": "Construir una capa regional de inteligencia",
-      "value": "-21%",
-      "detail": "Reducir pérdida de eficiencia por duplicación, improvisación y decisiones aisladas por mercado."
-    },
-    {
-      "title": "Preparar expansión ordenada del clúster",
-      "value": "+$2.8M MXN",
-      "detail": "Activar Ecuador y Venezuela con una lógica de entrada más inteligente."
-    }
+    { "channel": "Amazon",        "revenue_usd": 181425, "orders": 1865, "aov_usd": 97.3  },
+    { "channel": "Mercado Libre", "revenue_usd": 469606, "orders": 4214, "aov_usd": 111.4 },
+    { "channel": "Walmart",       "revenue_usd": 454451, "orders": 2201, "aov_usd": 206.5 }
   ],
   "growth_engine": [
-    {
-      "title": "Estrategia de demanda",
-      "body": "Categorías, mensajes y arquitectura de funnel para que cada peso responda a un objetivo de negocio."
-    },
-    {
-      "title": "Captura de intención",
-      "body": "Paid Search, SEO y contenido conectados para asegurar presencia en momentos de alta intención."
-    },
-    {
-      "title": "Conversión y commerce",
-      "body": "Traducir tráfico en resultado comercial: rutas de compra, retail readiness y optimización de activos."
-    },
-    {
-      "title": "Inteligencia regional",
-      "body": "Reporting unificado, aprendizajes compartidos y decisiones que benefician a los tres mercados."
-    }
-  ],
-  "service_model": [
-    { "title": "Planeación estratégica regional", "body": "Priorización de mercados, categorías, mensajes y objetivos trimestrales." },
-    { "title": "Paid media y performance", "body": "Awareness, consideration y conversion con lógica integrada y revisión continua." },
-    { "title": "SEO, contenidos y experiencia digital", "body": "Visibilidad orgánica, arquitectura de contenido y activos que apoyan la conversión." },
-    { "title": "Reporting ejecutivo", "body": "Tablero y narrativa para que Midea vea progreso, aprendizajes y próximos movimientos." }
+    { "title": "Estrategia de demanda",      "body": "Categorías, mensajes y arquitectura de funnel para que cada dólar responda a un objetivo de negocio." },
+    { "title": "Captura de intención",       "body": "Paid Search, SEO y contenido conectados para asegurar presencia en momentos de alta intención." },
+    { "title": "Conversión y commerce",      "body": "Traducir tráfico en resultado comercial: rutas de compra, retail readiness y optimización de activos." },
+    { "title": "Inteligencia regional",      "body": "Reporting unificado, aprendizajes compartidos y decisiones que benefician a los tres mercados." }
   ],
   "countries": [
     {
-      "id": "co",
-      "name": "Colombia",
-      "status": "Mercado prioritario",
+      "id": "co", "name": "Colombia", "status": "Mercado prioritario",
       "headline": "La base ya existe. La oportunidad es activar el funnel completo.",
       "north_star": "Convertir una operación eficiente en captura de intención en un sistema completo que también construya awareness y cierre conversión.",
       "priority_sectors": ["Aire acondicionado", "Lavado", "Cocción"],
       "signals": [
-        "Paid Search ya aporta 60% del tráfico con CPC muy eficiente ($0.12 MXN).",
+        "Paid Search ya aporta 60% del tráfico con CPC muy eficiente ($0.007 USD).",
         "37% de keywords en top 10 SEO — hay espacio claro para crecer orgánicamente.",
         "Sin capa de conversión activa todavía — es la mayor oportunidad inmediata."
       ],
@@ -322,15 +159,14 @@
       ],
       "kpis": {
         "q2_focus": "Funnel completo",
-        "target_revenue_uplift_mxn": 2400000,
+        "target_revenue_uplift_usd": 139050,
         "target_top10_share": 0.52,
-        "target_paid_mix_conversion": 0.24
+        "target_paid_mix_conversion": 0.24,
+        "uplift_note": "Escenario estimado"
       }
     },
     {
-      "id": "ec",
-      "name": "Ecuador",
-      "status": "Expansión disciplinada",
+      "id": "ec", "name": "Ecuador", "status": "Expansión disciplinada",
       "headline": "Mercado nuevo, pero no empezamos desde cero.",
       "north_star": "Entrar con estructura ligera usando el playbook de Colombia y México. Probar, aprender y escalar con evidencia.",
       "priority_sectors": ["Refrigeración", "Pequeños electrodomésticos", "Climatización"],
@@ -346,15 +182,14 @@
       ],
       "kpis": {
         "q2_focus": "Entrada controlada",
-        "target_revenue_uplift_mxn": 1450000,
+        "target_revenue_uplift_usd": 84009,
         "target_top10_share": 0.34,
-        "target_paid_mix_conversion": 0.18
+        "target_paid_mix_conversion": 0.18,
+        "uplift_note": "Escenario estimado"
       }
     },
     {
-      "id": "ve",
-      "name": "Venezuela",
-      "status": "Captura selectiva",
+      "id": "ve", "name": "Venezuela", "status": "Captura selectiva",
       "headline": "Disciplina operativa sobre volumen.",
       "north_star": "Concentrar recursos donde la intención sea más clara. Aprender rápido, escalar con criterio.",
       "priority_sectors": ["Climatización", "Esenciales del hogar", "Reposición"],
@@ -370,40 +205,18 @@
       ],
       "kpis": {
         "q2_focus": "Eficiencia selectiva",
-        "target_revenue_uplift_mxn": 980000,
+        "target_revenue_uplift_usd": 56779,
         "target_top10_share": 0.22,
-        "target_paid_mix_conversion": 0.14
+        "target_paid_mix_conversion": 0.14,
+        "uplift_note": "Escenario estimado"
       }
     }
   ],
-  "competitive_advantage": [
-    { "title": "Ya conocemos la cuenta", "body": "Contexto, historia, benchmarks y lectura real del negocio digital de Midea en la región." },
-    { "title": "Aprendizajes de México y LATAM", "body": "No proponemos desde teoría. Proponemos desde experiencia comprobada con datos reales." },
-    { "title": "Servicios conectados a negocio", "body": "Paid, SEO, contenido, web y commerce bajo una misma lógica de crecimiento." },
-    { "title": "Capacidad para acompañar expansión", "body": "Podemos sostener Colombia y construir el clúster en paralelo sin perder foco operativo." }
-  ],
   "impact": {
-    "headline_metrics": [
-      {
-        "label": "Potencial ingresos del clúster",
-        "value": "$6.2M MXN",
-        "detail": "Proyección a 12 meses con CO, EC y VE bajo una lógica regional integrada."
-      },
-      {
-        "label": "Tiempo para activar el sistema",
-        "value": "4 semanas",
-        "detail": "Para conectar media, SEO, web y reporting bajo una narrativa de negocio unificada."
-      },
-      {
-        "label": "Ganancia estimada en eficiencia",
-        "value": "21%",
-        "detail": "Por menor pérdida de aprendizaje y mejor reutilización estratégica de activos entre mercados."
-      }
-    ],
     "scenario": [
-      { "phase": "90 días", "base": 1.2, "continuidad": 2.0 },
-      { "phase": "180 días", "base": 2.1, "continuidad": 4.1 },
-      { "phase": "12 meses", "base": 3.4, "continuidad": 6.2 }
+      { "phase": "90 días",  "base": 70,  "continuidad": 117 },
+      { "phase": "180 días", "base": 122, "continuidad": 238 },
+      { "phase": "12 meses", "base": 197, "continuidad": 359 }
     ]
   },
   "next_steps": [
