@@ -1,0 +1,132 @@
+:root {
+  color-scheme: dark;
+  --bg: #090909;
+  --bg-soft: #111111;
+  --panel: rgba(23, 23, 23, 0.86);
+  --panel-strong: rgba(13, 13, 13, 0.94);
+  --ink: #f3f3f3;
+  --muted: #a3a3a3;
+  --line: rgba(255, 255, 255, 0.1);
+  --amber: #f2c230;
+  --amber-soft: rgba(242, 194, 48, 0.16);
+  --gray: #2e2e2e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(242, 194, 48, 0.1), transparent 22%),
+    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.04), transparent 18%),
+    linear-gradient(180deg, #080808 0%, #0d0d0d 45%, #121212 100%);
+}
+
+::selection {
+  background: rgba(242, 194, 48, 0.28);
+  color: #111111;
+}
+
+.app-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black 42%, transparent 88%);
+  opacity: 0.3;
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, var(--panel-strong), var(--panel));
+  backdrop-filter: blur(18px);
+}
+
+.section-shell {
+  position: relative;
+}
+
+.section-shell::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(242, 194, 48, 0.18), transparent);
+}
+
+.metric-card,
+.signal-card,
+.floating-card {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background 220ms ease;
+}
+
+.metric-card:hover,
+.signal-card:hover,
+.floating-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
+  border-color: rgba(242, 194, 48, 0.26);
+}
+
+.country-pill[data-active="true"] {
+  background: var(--amber);
+  color: #111111;
+  border-color: var(--amber);
+}
+
+.country-pill[data-active="false"] {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.progress-rail {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.16));
+}
+
+.progress-bar {
+  background: linear-gradient(180deg, var(--amber), #c99200);
+}
+
+.tooltip-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 15, 15, 0.96);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(255, 255, 255, 0.08);
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.map-line {
+  background: linear-gradient(90deg, rgba(242, 194, 48, 0.45), rgba(255, 255, 255, 0.12));
+}
+
+.accent-ring {
+  box-shadow: 0 0 0 1px rgba(242, 194, 48, 0.26);
+}
+
+@media (max-width: 1024px) {
+  .app-shell::before {
+    background-size: 56px 56px;
+    opacity: 0.18;
+  }
+}

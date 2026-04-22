@@ -1,0 +1,503 @@
+{
+  "meta": {
+    "title": "Midea Regional Growth Intelligence Hub",
+    "subtitle": "Propuesta estratégica para consolidar Colombia y escalar el clúster andino con aprendizajes probados de México y LATAM.",
+    "updated_at": "2026-04-22",
+    "note": "Los datos Q1 provienen de los archivos compartidos por Midea. Ecuador y Venezuela se presentan como proyecciones estratégicas editables."
+  },
+  "hero_kpis": [
+    {
+      "label": "ROAS de conversión en México",
+      "value": "20.7x",
+      "detail": "La operación en México ya demuestra que un modelo full-funnel bien conectado sí convierte inversión en ingresos."
+    },
+    {
+      "label": "Tráfico pagado en Colombia",
+      "value": "60%",
+      "detail": "Paid Search ya está capturando la intención. La oportunidad está en monetizar mejor esa demanda."
+    },
+    {
+      "label": "Oportunidad estimada del clúster",
+      "value": "$6.2M MXN",
+      "detail": "Potencial de 12 meses si Colombia, Ecuador y Venezuela se activan con una lógica regional y no como mercados aislados."
+    }
+  ],
+  "context_blocks": [
+    {
+      "title": "La cuenta ya no necesita una agencia que empiece de cero",
+      "body": "Necesita un socio que ya entienda la marca, la operación, los aprendizajes regionales y cómo acelerar la siguiente etapa sin curva de onboarding."
+    },
+    {
+      "title": "Colombia es la prioridad comercial inmediata",
+      "body": "Es el mercado donde ya existe señal de demanda y donde una mejor arquitectura de conversión puede generar impacto más rápido."
+    },
+    {
+      "title": "México nos da una base que nadie nuevo tendría",
+      "body": "Ya contamos con señales reales sobre canales, objetivos, contenidos y estructuras que sí funcionan dentro del ecosistema de Midea."
+    }
+  ],
+  "continuity_proof": [
+    {
+      "title": "Conocimiento acumulado de la cuenta",
+      "body": "No partimos de hipótesis. Partimos de aprendizajes concretos en paid media, SEO, tráfico y comercio digital dentro del universo Midea."
+    },
+    {
+      "title": "Visión regional, no localista",
+      "body": "Hemos visto patrones comparables entre México, Colombia, Perú y LATAM. Eso permite tomar mejores decisiones para el nuevo clúster."
+    },
+    {
+      "title": "Continuidad sin pérdida de velocidad",
+      "body": "Cambiar de agencia implicaría reiniciar contexto, narrativa, benchmarks y lógica de optimización. Seguir con nosotros preserva velocidad y criterio."
+    }
+  ],
+  "pain_points": [
+    {
+      "title": "La demanda ya existe, pero no está bien capitalizada",
+      "detail": "Colombia captura tráfico eficiente, pero no está operando todavía con una estructura full-funnel ni con una capa robusta de conversión.",
+      "impact": "Se generan resultados tácticos, pero no un motor sostenido de crecimiento."
+    },
+    {
+      "title": "Los aprendizajes regionales no están sistematizados",
+      "detail": "Lo que funciona en México todavía no vive como playbook regional replicable para Colombia y el resto del clúster.",
+      "impact": "Cada mercado aprende más lento de lo que debería."
+    },
+    {
+      "title": "La decisión ejecutiva sigue viendo canales, no sistema",
+      "detail": "Si paid, SEO, social, web y commerce se analizan por separado, la conversación se vuelve táctica y no de negocio.",
+      "impact": "Se dificulta defender inversión, priorizar mercados y mostrar valor estratégico."
+    }
+  ],
+  "q1_kpi_summary": [
+    {
+      "country": "MX",
+      "investment_mxn": 336212,
+      "consideration_cpc_mxn": 0.45,
+      "conversion_cpa_mxn": 3.65,
+      "key_insight": "México ya opera como un sistema maduro: awareness, consideration y conversion trabajan juntos."
+    },
+    {
+      "country": "CO",
+      "investment_mxn": 28505,
+      "consideration_cpc_mxn": 0.12,
+      "conversion_cpa_mxn": null,
+      "key_insight": "Colombia tiene muy buena eficiencia para capturar intención, pero aún no está diseñada para cerrar valor aguas abajo."
+    },
+    {
+      "country": "PE",
+      "investment_mxn": 25958,
+      "consideration_cpc_mxn": 1.13,
+      "conversion_cpa_mxn": null,
+      "key_insight": "Perú sirve como contraste: cuando la estructura no acompaña, el costo por resultado se deteriora."
+    }
+  ],
+  "paid_media_country": [
+    {
+      "country": "CO",
+      "planned_budget_mxn": 36000,
+      "executed_budget_mxn": 28505,
+      "budget_execution_pct": 0.7918,
+      "campaigns": 9,
+      "impressions": 1140734,
+      "clicks": 33889,
+      "ctr": 0.0297,
+      "avg_cpc_mxn": 0.84,
+      "revenue_mxn": 0,
+      "roas": null
+    },
+    {
+      "country": "MX",
+      "planned_budget_mxn": 504400,
+      "executed_budget_mxn": 336212,
+      "budget_execution_pct": 0.6666,
+      "campaigns": 30,
+      "impressions": 22730224,
+      "clicks": 218753,
+      "ctr": 0.0096,
+      "avg_cpc_mxn": 1.54,
+      "revenue_mxn": 4381158,
+      "roas": 13.03
+    },
+    {
+      "country": "PE",
+      "planned_budget_mxn": 36000,
+      "executed_budget_mxn": 25958,
+      "budget_execution_pct": 0.7211,
+      "campaigns": 9,
+      "impressions": 701393,
+      "clicks": 10361,
+      "ctr": 0.0148,
+      "avg_cpc_mxn": 2.51,
+      "revenue_mxn": 0,
+      "roas": null
+    }
+  ],
+  "paid_media_objective": [
+    {
+      "country": "MX",
+      "objective": "Awareness",
+      "spend_mxn": 53203,
+      "results": 6028025,
+      "cpc_mxn": 2.06,
+      "cost_per_result_mxn": 0.01,
+      "roas": null
+    },
+    {
+      "country": "MX",
+      "objective": "Consideration",
+      "spend_mxn": 71214,
+      "results": 156591,
+      "cpc_mxn": 1.45,
+      "cost_per_result_mxn": 0.45,
+      "roas": null
+    },
+    {
+      "country": "MX",
+      "objective": "Conversion",
+      "spend_mxn": 211795,
+      "results": 58060,
+      "cpc_mxn": 1.47,
+      "cost_per_result_mxn": 3.65,
+      "roas": 20.69,
+      "roas_label": "20.69x"
+    },
+    {
+      "country": "CO",
+      "objective": "Consideration",
+      "spend_mxn": 28505,
+      "results": 246792,
+      "cpc_mxn": 0.84,
+      "cost_per_result_mxn": 0.12,
+      "roas": null
+    }
+  ],
+  "web_traffic_country": [
+    {
+      "country": "CO",
+      "sessions": 11722,
+      "users": 9718,
+      "new_users": 6653,
+      "pageviews": 29677,
+      "pages_per_session": 2.53,
+      "bounce_rate": 0.2606,
+      "avg_session_duration_sec": 278.4
+    },
+    {
+      "country": "MX",
+      "sessions": 62308,
+      "users": 55784,
+      "new_users": 35538,
+      "pageviews": 202827,
+      "pages_per_session": 3.26,
+      "bounce_rate": 0.2108,
+      "avg_session_duration_sec": 1063.6
+    },
+    {
+      "country": "PE",
+      "sessions": 6369,
+      "users": 5208,
+      "new_users": 3473,
+      "pageviews": 13905,
+      "pages_per_session": 2.18,
+      "bounce_rate": 0.1329,
+      "avg_session_duration_sec": 3271
+    }
+  ],
+  "web_top_sources": [
+    {
+      "country": "CO",
+      "source": "Paid Search",
+      "sessions": 7053,
+      "share_of_sessions": 0.6017
+    },
+    {
+      "country": "CO",
+      "source": "Organic Search",
+      "sessions": 3442,
+      "share_of_sessions": 0.2936
+    },
+    {
+      "country": "CO",
+      "source": "Direct",
+      "sessions": 970,
+      "share_of_sessions": 0.0828
+    },
+    {
+      "country": "MX",
+      "source": "Organic Search",
+      "sessions": 25757,
+      "share_of_sessions": 0.4134
+    },
+    {
+      "country": "MX",
+      "source": "Direct",
+      "sessions": 16004,
+      "share_of_sessions": 0.2569
+    }
+  ],
+  "seo_country": [
+    {
+      "country": "CO",
+      "keywords_tracked": 100,
+      "top10_keywords": 37,
+      "top10_share": 0.37,
+      "avg_position": 26.54,
+      "estimated_traffic": 7665,
+      "search_volume": 248840
+    },
+    {
+      "country": "MX",
+      "keywords_tracked": 100,
+      "top10_keywords": 93,
+      "top10_share": 0.93,
+      "avg_position": 3.82,
+      "estimated_traffic": 45114,
+      "search_volume": 1843490
+    },
+    {
+      "country": "PE",
+      "keywords_tracked": 100,
+      "top10_keywords": 29,
+      "top10_share": 0.29,
+      "avg_position": 23.22,
+      "estimated_traffic": 5411,
+      "search_volume": 143790
+    }
+  ],
+  "ecommerce_mx_channels": [
+    {
+      "channel": "Amazon",
+      "revenue_mxn": 3131395,
+      "orders": 1865,
+      "aov_mxn": 1679.03
+    },
+    {
+      "channel": "Mercado Libre",
+      "revenue_mxn": 8105407,
+      "orders": 4214,
+      "aov_mxn": 1923.45
+    },
+    {
+      "channel": "Walmart",
+      "revenue_mxn": 7843816,
+      "orders": 2201,
+      "aov_mxn": 3563.75
+    }
+  ],
+  "colombia_case": {
+    "headline": "Colombia ya muestra eficiencia en captura de demanda. El siguiente paso es convertir esa eficiencia en crecimiento defendible.",
+    "opportunities": [
+      "Diseñar un funnel más completo, no solo campañas de consideración.",
+      "Conectar Paid Search con contenido, SEO, experiencia web y rutas de conversión.",
+      "Usar aprendizajes de México para priorizar categorías, creatividades y arquitectura digital."
+    ],
+    "signals": [
+      {
+        "label": "Share de sesiones por Paid Search",
+        "value": "60%"
+      },
+      {
+        "label": "CPC de consideración",
+        "value": "$0.12 MXN"
+      },
+      {
+        "label": "Top 10 share SEO",
+        "value": "37%"
+      }
+    ]
+  },
+  "opportunity_areas": [
+    {
+      "title": "Escalar Colombia con lógica full-funnel",
+      "value": "+2.4M MXN",
+      "detail": "Convertir la eficiencia actual de consideración en una operación con mayor profundidad de awareness y cierre."
+    },
+    {
+      "title": "Transferir aprendizajes de México",
+      "value": "Menor curva",
+      "detail": "Acelerar decisiones creativas, de pauta, SEO y commerce con base en resultados reales ya observados."
+    },
+    {
+      "title": "Construir una capa regional de inteligencia",
+      "value": "-21%",
+      "detail": "Reducir pérdida de eficiencia por duplicación, improvisación y decisiones aisladas por mercado."
+    },
+    {
+      "title": "Preparar expansión ordenada del clúster",
+      "value": "+2.8M MXN",
+      "detail": "Activar Ecuador y Venezuela con una lógica de entrada más inteligente, no empezando de cero."
+    }
+  ],
+  "growth_engine": [
+    {
+      "title": "Estrategia de demanda",
+      "body": "Definir categorías, mensajes y arquitectura de funnel para que cada peso responda a un objetivo de negocio."
+    },
+    {
+      "title": "Captura de intención",
+      "body": "Conectar Paid Search, SEO y contenido para asegurar presencia en momentos de alta intención."
+    },
+    {
+      "title": "Conversión y commerce",
+      "body": "Traducir tráfico en resultado comercial mediante rutas de compra, retail readiness y optimización de activos."
+    },
+    {
+      "title": "Inteligencia regional",
+      "body": "Unificar reporting, aprendizajes, pruebas y decisiones para que Colombia no aprenda sola."
+    }
+  ],
+  "service_model": [
+    {
+      "title": "Planeación estratégica regional",
+      "body": "Priorización de mercados, categorías, mensajes y objetivos trimestrales con foco de negocio."
+    },
+    {
+      "title": "Paid media y performance",
+      "body": "Operación de awareness, consideration y conversion con lógica integrada y revisión continua."
+    },
+    {
+      "title": "SEO, contenidos y experiencia digital",
+      "body": "Optimización de visibilidad, arquitectura de contenido y activos que apoyan la conversión."
+    },
+    {
+      "title": "Reporting ejecutivo y toma de decisión",
+      "body": "Tablero y narrativa para que Midea vea progreso, riesgos, aprendizajes y próximos movimientos."
+    }
+  ],
+  "countries": [
+    {
+      "id": "co",
+      "name": "Colombia",
+      "status": "Mercado prioritario",
+      "headline": "El caso más fuerte para continuidad inmediata.",
+      "north_star": "Tomar una operación eficiente en captación de intención y convertirla en un sistema regionalmente respaldado que sí construya crecimiento.",
+      "priority_sectors": ["Aire", "Lavado", "Cocción"],
+      "signals": [
+        "Paid Search aporta la mayor parte del tráfico.",
+        "La eficiencia actual justifica escalar con más estructura, no cambiar de rumbo.",
+        "SEO y profundidad web aún tienen espacio para fortalecer la conversión."
+      ],
+      "plays": [
+        "Ampliar el funnel con awareness y conversion sobre la base actual de consideración.",
+        "Priorizar categorías con mayor potencial comercial y mejor readiness digital.",
+        "Usar aprendizajes de México para acelerar decisiones creativas y de arquitectura."
+      ],
+      "kpis": {
+        "q2_focus": "Monetización inteligente",
+        "target_revenue_uplift_mxn": 2400000,
+        "target_top10_share": 0.52,
+        "target_paid_mix_conversion": 0.24
+      }
+    },
+    {
+      "id": "ec",
+      "name": "Ecuador",
+      "status": "Expansión disciplinada",
+      "headline": "Mercado para entrar con foco y eficiencia.",
+      "north_star": "Construir presencia con una estructura ligera, aprendiendo de Colombia y México desde el día uno.",
+      "priority_sectors": ["Refrigeración", "Pequeños electrodomésticos", "Climatización"],
+      "signals": [
+        "Conviene entrar con activos ya validados antes de escalar inversión.",
+        "El playbook regional permite evitar experimentación innecesaria.",
+        "El enfoque debe ser capturar demanda y probar rápidamente."
+      ],
+      "plays": [
+        "Lanzamiento search-first con assets regionales adaptados.",
+        "Testing controlado por categoría, oferta y mensaje.",
+        "Activación gradual según evidencia de conversión."
+      ],
+      "kpis": {
+        "q2_focus": "Entrada controlada",
+        "target_revenue_uplift_mxn": 1450000,
+        "target_top10_share": 0.34,
+        "target_paid_mix_conversion": 0.18
+      }
+    },
+    {
+      "id": "ve",
+      "name": "Venezuela",
+      "status": "Captura selectiva",
+      "headline": "Mercado donde la disciplina operativa vale más que el volumen.",
+      "north_star": "Concentrar recursos donde la intención sea más clara y la operación más sostenible.",
+      "priority_sectors": ["Climatización", "Esenciales del hogar", "Reposición"],
+      "signals": [
+        "La entrada debe ser prudente y basada en evidencia.",
+        "La flexibilidad presupuestal será crítica.",
+        "Los aprendizajes de los otros mercados reducen riesgo de ejecución."
+      ],
+      "plays": [
+        "Ir primero por demanda de alta intención.",
+        "Trabajar con un set reducido de activos y mensajes probados.",
+        "Evaluar expansión semanalmente según resultados."
+      ],
+      "kpis": {
+        "q2_focus": "Eficiencia selectiva",
+        "target_revenue_uplift_mxn": 980000,
+        "target_top10_share": 0.22,
+        "target_paid_mix_conversion": 0.14
+      }
+    }
+  ],
+  "competitive_advantage": [
+    {
+      "title": "Ya conocemos la cuenta",
+      "body": "Tenemos contexto, historia, benchmarks y una lectura real del negocio digital de Midea en la región."
+    },
+    {
+      "title": "Aprendizajes accionables de México y LATAM",
+      "body": "No proponemos desde teoría. Proponemos desde experiencia comprobada y señales reales del ecosistema."
+    },
+    {
+      "title": "Servicios conectados a negocio",
+      "body": "Paid, SEO, contenido, web y commerce se ordenan bajo una misma lógica de crecimiento y no como silos."
+    },
+    {
+      "title": "Capacidad para acompañar expansión",
+      "body": "Podemos sostener Colombia y al mismo tiempo construir el siguiente nivel regional sin perder foco operativo."
+    }
+  ],
+  "impact": {
+    "headline_metrics": [
+      {
+        "label": "Potencial de ingresos del clúster",
+        "value": "$6.2M MXN",
+        "detail": "Proyección a 12 meses aplicando una lógica regional basada en evidencia y continuidad operativa."
+      },
+      {
+        "label": "Tiempo para activar el nuevo sistema",
+        "value": "4 semanas",
+        "detail": "Para conectar media, SEO, web y reporting bajo una misma narrativa de negocio."
+      },
+      {
+        "label": "Ganancia estimada en eficiencia",
+        "value": "21%",
+        "detail": "Por menor pérdida de aprendizaje, mejor priorización y reutilización estratégica de activos."
+      }
+    ],
+    "scenario": [
+      {
+        "phase": "90 días",
+        "base": 1.2,
+        "continuidad": 2.0
+      },
+      {
+        "phase": "180 días",
+        "base": 2.1,
+        "continuidad": 4.1
+      },
+      {
+        "phase": "12 meses",
+        "base": 3.4,
+        "continuidad": 6.2
+      }
+    ]
+  },
+  "next_steps": [
+    "Renovar la operación de Colombia sobre una narrativa de crecimiento, no solo de ejecución.",
+    "Formalizar el playbook México-LATAM como ventaja regional de trabajo.",
+    "Activar el clúster andino con una capa de reporting y decisión compartida."
+  ],
+  "closing_statement": {
+    "title": "La mejor decisión para Colombia no es cambiar de agencia.",
+    "body": "Es capitalizar el conocimiento ya construido, acelerar con aprendizajes reales de México y LATAM, y convertir esa continuidad en una ventaja competitiva regional para Midea."
+  }
+}

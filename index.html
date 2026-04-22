@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Midea Regional Growth Intelligence Hub | Propuesta Colombia</title>
+    <meta
+      name="description"
+      content="Propuesta estratégica para retención y expansión de Midea LATAM, con foco en Colombia y aprendizajes de México y LATAM."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      window.tailwind = window.tailwind || {};
+      window.tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              obsidian: "#090909",
+              graphite: "#171717",
+              mist: "#a3a3a3",
+              steel: "#d4d4d4",
+              amber: "#f2c230",
+              ember: "#c99200"
+            },
+            boxShadow: {
+              panel: "0 24px 70px rgba(0, 0, 0, 0.38)",
+              float: "0 34px 110px rgba(0, 0, 0, 0.46)"
+            },
+            fontFamily: {
+              sans: ["Manrope", "sans-serif"],
+              serif: ["Instrument Serif", "serif"]
+            },
+            backgroundImage: {
+              grid: "linear-gradient(to right, rgba(15, 23, 32, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(15, 23, 32, 0.05) 1px, transparent 1px)"
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body class="bg-obsidian text-white antialiased">
+    <div id="root"></div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+  </html>
