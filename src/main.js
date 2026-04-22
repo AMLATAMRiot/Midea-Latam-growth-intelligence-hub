@@ -25,11 +25,16 @@ const logos = {
 };
 
 const fmt = {
-  mxn: (v, compact = true) => new Intl.NumberFormat("es-MX", {
-    style: "currency", currency: "MXN",
-    notation: compact ? "compact" : "standard",
-    maximumFractionDigits: compact ? 1 : 0
-  }).format(v),
+  usd: (v, compact = true) => {
+    if (compact) {
+      if (v >= 1000000) return `${(v/1000000).toFixed(1)}M USD`;
+      if (v >= 1000)    return `${(v/1000).toFixed(1)}K USD`;
+      return `${v.toFixed(2)} USD`;
+    }
+    return new Intl.NumberFormat("en-US", {
+      style: "currency", currency: "USD", maximumFractionDigits: 0
+    }).format(v);
+  },
   num: (v) => new Intl.NumberFormat("es-CO", {
     notation: v >= 10000 ? "compact" : "standard",
     maximumFractionDigits: 1
@@ -84,7 +89,7 @@ function App() {
 
   const clusterCountry = d.countries.find(c => c.id === clusterTab);
   const paidData = d.paid_media_country.map(r => ({
-    mercado: r.country, inversion: r.executed_budget_mxn, ingresos: r.revenue_mxn
+    mercado: r.country, inversion: r.executed_budget_usd, ingresos: r.revenue_usd
   }));
   const seoData = d.seo_country.map(r => ({
     mercado: r.country, top10: Math.round(r.top10_share * 100)
@@ -193,7 +198,7 @@ function App() {
                 initial=${{ opacity:0, y:20 }} whileInView=${{ opacity:1, y:0 }}
                 viewport=${{ once:true }} transition=${{ duration:0.5 }}>
                 <p class="text-[10px] uppercase tracking-[0.32em] text-neutral-500">${item.objective}</p>
-                <p class="mt-3 text-3xl font-semibold text-white">${fmt.mxn(item.spend_mxn)}</p>
+                <p class="mt-3 text-3xl font-semibold text-white">${fmt.usd(item.spend_usd)}</p>
                 <p class="mt-1 text-sm text-neutral-500">invertidos en Q1</p>
                 ${item.roas ? html`
                   <div class="mt-4 rounded-2xl bg-[#f2c230]/12 px-4 py-3">
@@ -203,8 +208,8 @@ function App() {
                 ` : html`
                   <p class="mt-4 text-sm leading-6 text-neutral-400">
                     ${item.objective === "Awareness"
-                      ? `${fmt.num(item.results)} impresiones · CPM ${fmt.mxn(item.cost_per_result_mxn, false)}`
-                      : `${fmt.num(item.results)} clicks · CPC ${fmt.mxn(item.cost_per_result_mxn, false)}`}
+                      ? `${fmt.num(item.results)} impresiones · CPM ${fmt.usd(item.cost_per_result_usd, false)}`
+                      : `${fmt.num(item.results)} clicks · CPC ${fmt.usd(item.cost_per_result_usd, false)}`}
                   </p>
                 `}
               </${motion.div}>
@@ -216,17 +221,17 @@ function App() {
             <!-- Ecommerce MX -->
             <div class="glass-panel rounded-[32px] border border-white/10 p-6 shadow-xl md:p-8">
               <p class="text-sm font-semibold text-white">E-commerce: ingresos por canal en México</p>
-              <p class="mt-2 text-sm text-neutral-400">Tres canales maduros, ${fmt.mxn(d.ecommerce_mx_channels.reduce((s,r)=>s+r.revenue_mxn,0))} generados en Q1.</p>
+              <p class="mt-2 text-sm text-neutral-400">Tres canales maduros, ${fmt.usd(d.ecommerce_mx_channels.reduce((s,r)=>s+r.revenue_usd,0))} generados en Q1.</p>
               <div class="mt-6 rounded-[22px] border border-white/10 bg-black/20 p-4">
                 <${ResponsiveContainer} width="100%" height=${240}>
                   <${BarChart} data=${d.ecommerce_mx_channels} layout="vertical" margin=${{ left:8, right:12 }}>
                     <${CartesianGrid} horizontal=${false} stroke=${C.line} />
                     <${XAxis} type="number" tick=${axisTick} tickLine=${false} axisLine=${false}
-                      tickFormatter=${v => fmt.mxn(v)} />
+                      tickFormatter=${v => fmt.usd(v)} />
                     <${YAxis} type="category" dataKey="channel" width=${90} tick=${axisTick}
                       tickLine=${false} axisLine=${false} />
                     <${Tooltip} content=${ChartTip} />
-                    <${Bar} dataKey="revenue_mxn" name="Ingresos" radius=${[0,8,8,0]} fill=${C.amber} />
+                    <${Bar} dataKey="revenue_usd" name="Ingresos" radius=${[0,8,8,0]} fill=${C.amber} />
                   </${BarChart}>
                 </${ResponsiveContainer}>
               </div>
@@ -281,8 +286,8 @@ function App() {
           <div class="mt-10 grid gap-4 md:grid-cols-4">
             ${[
               { label: "Sesiones web", value: fmt.num(11722), note: "60% via Paid Search" },
-              { label: "Inversión paid Q1", value: fmt.mxn(28505), note: "79% de ejecución presupuestal" },
-              { label: "CPC consideración", value: "$0.12 MXN", note: "Muy eficiente vs benchmark" },
+              { label: "Inversión paid Q1", value: fmt.usd(1652), note: "79% de ejecución presupuestal" },
+              { label: "CPC consideración", value: "$0.007 USD", note: "Muy eficiente vs benchmark" },
               { label: "Keywords top 10 SEO", value: "37%", note: "vs 93% de México → gap accionable" }
             ].map((s, i) => html`
               <${motion.div} key=${s.label}
@@ -377,7 +382,7 @@ function App() {
                 <p class="mt-3 text-sm leading-7 text-neutral-400">${clusterCountry.north_star}</p>
                 <div class="mt-7 grid gap-3 sm:grid-cols-3">
                   ${[
-                    { label: "Uplift estimado", value: fmt.mxn(clusterCountry.kpis.target_revenue_uplift_mxn) },
+                    { label: "Uplift estimado", value: fmt.usd(clusterCountry.kpis.target_revenue_uplift_usd) },
                     { label: "Meta SEO top 10", value: fmt.pct(clusterCountry.kpis.target_top10_share) },
                     { label: "Mix conversión", value: fmt.pct(clusterCountry.kpis.target_paid_mix_conversion) }
                   ].map(m => html`
@@ -418,7 +423,7 @@ function App() {
                 initial=${{ opacity:0, y:12 }} whileInView=${{ opacity:1, y:0 }}
                 viewport=${{ once:true }} transition=${{ delay: i*0.1 }}>
                 <p class="text-xs font-semibold text-neutral-500">${c.name}</p>
-                <p class="mt-2 text-3xl font-semibold text-white">${fmt.mxn(c.kpis.target_revenue_uplift_mxn)}</p>
+                <p class="mt-2 text-3xl font-semibold text-white">${fmt.usd(c.kpis.target_revenue_uplift_usd)}</p>
                 <p class="mt-1 text-xs text-neutral-500">potencial Q2–Q3</p>
               </${motion.div}>
             `)}
@@ -445,7 +450,7 @@ function App() {
                 stage: "01 · Awareness",
                 title: "Hacer que Midea sea reconocida",
                 items: ["Contenido en redes sociales", "Video en Meta y YouTube", "Influencer marketing"],
-                note: "México: 6M impresiones Q1 con $53K MXN"
+                note: "México: 6M impresiones Q1 con $3.1K USD"
               },
               {
                 stage: "02 · Consideración",
@@ -495,7 +500,7 @@ function App() {
                     <${CartesianGrid} vertical=${false} stroke=${C.line} />
                     <${XAxis} dataKey="mercado" tick=${axisTick} tickLine=${false} axisLine=${false} />
                     <${YAxis} tick=${axisTick} tickLine=${false} axisLine=${false}
-                      tickFormatter=${v => fmt.mxn(v)} width=${90} />
+                      tickFormatter=${v => fmt.usd(v)} width=${90} />
                     <${Tooltip} content=${ChartTip} />
                     <${Bar} dataKey="inversion" name="Inversión" radius=${[6,6,0,0]} fill=${C.gray} />
                     <${Bar} dataKey="ingresos" name="Ingresos" radius=${[6,6,0,0]} fill=${C.amber} />
@@ -544,8 +549,8 @@ function App() {
               </div>
               <div class="mt-5 rounded-[18px] bg-[#f2c230]/10 px-4 py-4">
                 <p class="text-xs uppercase tracking-[0.28em] text-[#f2c230]">Potencial total clúster</p>
-                <p class="mt-1 text-3xl font-semibold text-white">$6.2M MXN</p>
-                <p class="text-xs text-neutral-400 mt-1">a 12 meses con operación regional integrada</p>
+                <p class="mt-1 text-3xl font-semibold text-white">~$359K USD</p>
+                <p class="text-xs text-neutral-400 mt-1">a 12 meses · escenario modelado · 1 USD = 17.26 MXN</p>
               </div>
             </div>
           </div>
@@ -660,7 +665,7 @@ function ChartTip({ active, payload, label }) {
   const fmt2 = (entry) => {
     if (typeof entry.value !== "number") return entry.value;
     const k = String(entry.dataKey).toLowerCase();
-    if (k.includes("inversion") || k.includes("ingres") || k.includes("revenue")) return fmt.mxn(entry.value, false);
+    if (k.includes("inversion") || k.includes("ingres") || k.includes("revenue") || k.includes("usd")) return fmt.usd(entry.value, false);
     if (k.includes("top10")) return `${entry.value}%`;
     return entry.value > 999 ? fmt.num(entry.value) : entry.value;
   };
