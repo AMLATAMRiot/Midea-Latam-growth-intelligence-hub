@@ -63,7 +63,7 @@ function App() {
   const [clusterTab, setClusterTab] = useState("co");
 
   useEffect(() => {
-    fetch("./src/data/mideaData.json?v=2")
+    fetch("./src/data/mideaData.json?v=3")
       .then(r => r.json()).then(setD)
       .catch(console.error);
   }, []);
@@ -158,6 +158,7 @@ function App() {
               </p>
               <div class="mt-8 flex flex-wrap gap-3">
                 <${Chip} text="México: ROAS 20.7×" tone="amber" />
+                <${Chip} text="14 años · 50+ colaboradores" tone="dark" />
                 <${Chip} text="Colombia Q1 activo" tone="dark" />
                 <${Chip} text="Clúster CO · EC · VE" tone="dark" />
               </div>
@@ -192,8 +193,24 @@ function App() {
             México no es solo una referencia. Es el playbook vivo que define lo que es posible para Midea en la región: awareness, consideración y conversión trabajando en sistema.
           </p>
 
+          <!-- Social KPIs 2025 strip -->
+          <div class="mt-8 grid gap-3 sm:grid-cols-4">
+            ${[
+              { label: "Alcance 2025 vs meta", value: "261%", note: "101.9M impresiones · meta era 39M", color: "text-[#f2c230]" },
+              { label: "Seguidores IG", value: "186%", note: "22,378 seguidores · meta 12,000", color: "text-[#f2c230]" },
+              { label: "Seguidores FB", value: "101%", note: "146,765 · meta 146,000", color: "text-white" },
+              { label: "Sesiones web", value: "624%", note: "1.09M sesiones · meta 176,000", color: "text-[#f2c230]" }
+            ].map((s, i) => html`
+              <div key=${s.label} class="rounded-[20px] border border-white/10 bg-white/5 px-5 py-4">
+                <p class="text-[9px] uppercase tracking-[0.28em] text-neutral-500">${s.label} · 2025</p>
+                <p class=${"mt-2 text-3xl font-semibold " + s.color}>${s.value}</p>
+                <p class="mt-1 text-xs text-neutral-500 leading-5">${s.note}</p>
+              </div>
+            `)}
+          </div>
+
           <!-- Funnel pillars MX -->
-          <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <div class="mt-8 grid gap-4 md:grid-cols-3">
             ${mxObjectives.map(item => html`
               <${motion.div} key=${item.objective}
                 class="floating-card glass-panel rounded-[28px] border border-white/10 p-7 shadow-xl"
@@ -266,7 +283,7 @@ function App() {
           <div class="mt-6 rounded-[28px] border border-[#f2c230]/20 bg-[#f2c230]/08 px-7 py-6">
             <p class="text-xs uppercase tracking-[0.32em] text-[#f2c230]">Lo que esto significa para el clúster</p>
             <p class="mt-3 text-xl font-semibold text-white leading-snug">
-              Un modelo con awareness, consideración y conversión integrados ya está validado dentro de Midea. No hay que inventarlo — hay que trasladarlo.
+              Un modelo con awareness, consideración y conversión integrados ya está validado dentro de Midea. No hay que inventarlo — hay que trasladarlo. Y ya lo trasladamos antes: el mismo sistema que construimos para Midea MX lo replicamos para Estée Lauder en 9 países.
             </p>
           </div>
         </${Sec}>
@@ -284,8 +301,23 @@ function App() {
             En Q1 operamos Colombia solo con redes sociales y sin presupuesto propio. Aun así los datos muestran señales claras de demanda. Con un funnel estructurado, el potencial es mucho mayor.
           </p>
 
+          <!-- CO Social wins 2025 -->
+          <div class="mt-8 grid gap-3 sm:grid-cols-3">
+            ${[
+              { label: "Seguidores IG 2025", value: "331%", note: "15,890 conseguidos · meta era 4,800", hi: true },
+              { label: "Seguidores FB 2025", value: "133%", note: "124,567 · meta 94,000", hi: false },
+              { label: "Sesiones web 2025", value: "107%", note: "55,812 sesiones · meta 52,400", hi: false }
+            ].map(s => html`
+              <div key=${s.label} class=${"rounded-[20px] border px-5 py-4 " + (s.hi ? "border-[#f2c230]/30 bg-[#f2c230]/08" : "border-white/10 bg-white/5")}>
+                <p class="text-[9px] uppercase tracking-[0.28em] text-neutral-500">${s.label}</p>
+                <p class=${"mt-2 text-3xl font-semibold " + (s.hi ? "text-[#f2c230]" : "text-white")}>${s.value}</p>
+                <p class="mt-1 text-xs text-neutral-500 leading-5">${s.note}</p>
+              </div>
+            `)}
+          </div>
+
           <!-- Stats CO Q1 -->
-          <div class="mt-10 grid gap-4 md:grid-cols-4">
+          <div class="mt-6 grid gap-4 md:grid-cols-4">
             ${[
               { label: "Sesiones web", value: fmt.num(11722), note: "60% via Paid Search" },
               { label: "Inversión paid Q1", value: fmt.usd(1652), note: "79% de ejecución presupuestal" },
@@ -554,8 +586,69 @@ function App() {
             </div>
           </div>
 
+          <!-- ELC case proof -->
+          <div class="mt-8 grid gap-4 lg:grid-cols-[1fr_1fr_1fr]">
+            <div class="glass-panel rounded-[28px] border border-white/10 p-6 shadow-xl lg:col-span-1">
+              <p class="text-[9px] uppercase tracking-[0.3em] text-neutral-500">Caso de referencia · desde 2012</p>
+              <p class="mt-3 text-lg font-semibold text-white leading-snug">Estée Lauder Companies</p>
+              <p class="mt-2 text-sm text-neutral-400 leading-6">13+ años de relación continua con uno de los grupos de lujo y belleza más grandes del mundo. El mismo compromiso que le ofrecemos a Midea.</p>
+              <div class="mt-5 grid grid-cols-2 gap-3">
+                ${[
+                  { n: "14", label: "marcas gestionadas" },
+                  { n: "9", label: "países simultáneos" },
+                  { n: "6,800", label: "horas dedicadas FY25" },
+                  { n: "30+", label: "retailers operados" }
+                ].map(m => html`
+                  <div key=${m.label} class="rounded-[14px] bg-white/5 border border-white/10 px-3 py-3">
+                    <p class="text-xl font-semibold text-[#f2c230]">${m.n}</p>
+                    <p class="text-[10px] text-neutral-500 mt-0.5">${m.label}</p>
+                  </div>
+                `)}
+              </div>
+            </div>
+
+            <div class="glass-panel rounded-[28px] border border-white/10 p-6 shadow-xl">
+              <p class="text-[9px] uppercase tracking-[0.3em] text-neutral-500">Brand Protection · resultado real</p>
+              <p class="mt-3 text-lg font-semibold text-white leading-snug">Control del Grey Market en Mercado Libre</p>
+              <p class="mt-2 text-sm text-neutral-400 leading-6">Programa activo de denuncias PPI con efectividad operativa promedio del 80-91%. Relevante para Midea en Colombia y Venezuela donde el mercado gris es un riesgo real.</p>
+              <div class="mt-5 space-y-2">
+                ${[
+                  { periodo: "Jul–Sep 2025", total: 807, removidas: 647, pct: "80.2%" },
+                  { periodo: "Oct–Dic 2025", total: 568, removidas: 519, pct: "91.4%" },
+                  { periodo: "Ene–Mar 2026", total: 174, removidas: 140, pct: "80.5%" }
+                ].map(r => html`
+                  <div key=${r.periodo} class="flex items-center justify-between rounded-[14px] border border-white/10 bg-white/5 px-4 py-2.5">
+                    <p class="text-xs text-neutral-400">${r.periodo}</p>
+                    <p class="text-xs text-neutral-500">${r.total} denuncias</p>
+                    <p class="text-xs font-semibold text-[#f2c230]">${r.pct} efectividad</p>
+                  </div>
+                `)}
+              </div>
+            </div>
+
+            <div class="glass-panel rounded-[28px] border border-white/10 p-6 shadow-xl">
+              <p class="text-[9px] uppercase tracking-[0.3em] text-neutral-500">Capacidad operativa real</p>
+              <p class="mt-3 text-lg font-semibold text-white leading-snug">Lo que entregamos mensualmente para un cliente similar</p>
+              <div class="mt-4 space-y-2">
+                ${[
+                  "23 redes sociales administradas simultáneamente",
+                  "5 sitios web con mantenimiento activo",
+                  "5 marketplaces con paid media y retail maintenance",
+                  "750 horas mensuales de producción · 400 piezas",
+                  "Cobertura L-V 9-6 + guardias fines de semana",
+                  "50+ colaboradores especializados disponibles"
+                ].map(item => html`
+                  <div key=${item} class="flex items-start gap-2 text-xs leading-5 text-neutral-400">
+                    <span class="mt-1 flex-shrink-0 w-1 h-1 rounded-full bg-[#f2c230] opacity-70"></span>
+                    ${item}
+                  </div>
+                `)}
+              </div>
+            </div>
+          </div>
+
           <!-- Service pillars -->
-          <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             ${[
               {
                 cat: "Ecosistemas digitales",
@@ -705,12 +798,13 @@ function App() {
           </div>
 
           <!-- 14 years proof bar -->
-          <div class="mt-8 grid gap-4 sm:grid-cols-4">
+          <div class="mt-8 grid gap-4 sm:grid-cols-5">
             ${[
               { n: "14", label: "años de experiencia" },
-              { n: "5+", label: "países operando hoy" },
+              { n: "50+", label: "colaboradores especializados" },
+              { n: "14+", label: "países donde operamos" },
               { n: "360°", label: "capacidades cubiertas" },
-              { n: "1", label: "equipo, visión regional" }
+              { n: "13 años", label: "con Estée Lauder Companies" }
             ].map(p => html`
               <div key=${p.label} class="rounded-[22px] border border-white/10 bg-white/5 px-5 py-5 text-center">
                 <p class="text-4xl font-semibold text-[#f2c230]">${p.n}</p>
