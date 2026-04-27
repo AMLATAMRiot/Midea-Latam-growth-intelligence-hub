@@ -15,7 +15,7 @@
     {
       "label": "Impresiones generadas en MX",
       "value": "22.7M",
-      "detail": "Solo en Q1, con un funnel de tres capas activo y $19.5K USD de inversión total."
+      "detail": "Solo en Q1 2026, con un funnel de tres capas activo y $19.5K USD de inversión. En 2025 superamos el 624% de la meta de sesiones en México."
     },
     {
       "label": "Potencial del clúster",
@@ -121,32 +121,98 @@
     }
   ],
   "web_top_sources": [
-    { "country": "CO", "source": "Paid Search",    "sessions": 7053, "share_of_sessions": 0.6017 },
-    { "country": "CO", "source": "Organic Search", "sessions": 3442, "share_of_sessions": 0.2936 },
-    { "country": "CO", "source": "Direct",         "sessions": 970,  "share_of_sessions": 0.0828 }
+    {
+      "country": "CO",
+      "source": "Paid Search",
+      "sessions": 7053,
+      "share_of_sessions": 0.6017
+    },
+    {
+      "country": "CO",
+      "source": "Organic Search",
+      "sessions": 3442,
+      "share_of_sessions": 0.2936
+    },
+    {
+      "country": "CO",
+      "source": "Direct",
+      "sessions": 970,
+      "share_of_sessions": 0.0828
+    }
   ],
   "seo_country": [
-    { "country": "CO", "top10_keywords": 37,  "top10_share": 0.37, "avg_position": 26.54, "estimated_traffic": 7665  },
-    { "country": "MX", "top10_keywords": 93,  "top10_share": 0.93, "avg_position": 3.82,  "estimated_traffic": 45114 },
-    { "country": "PE", "top10_keywords": 29,  "top10_share": 0.29, "avg_position": 23.22, "estimated_traffic": 5411  }
+    {
+      "country": "CO",
+      "top10_keywords": 37,
+      "top10_share": 0.37,
+      "avg_position": 26.54,
+      "estimated_traffic": 7665
+    },
+    {
+      "country": "MX",
+      "top10_keywords": 93,
+      "top10_share": 0.93,
+      "avg_position": 3.82,
+      "estimated_traffic": 45114
+    },
+    {
+      "country": "PE",
+      "top10_keywords": 29,
+      "top10_share": 0.29,
+      "avg_position": 23.22,
+      "estimated_traffic": 5411
+    }
   ],
   "ecommerce_mx_channels": [
-    { "channel": "Amazon",        "revenue_usd": 181425, "orders": 1865, "aov_usd": 97.3  },
-    { "channel": "Mercado Libre", "revenue_usd": 469606, "orders": 4214, "aov_usd": 111.4 },
-    { "channel": "Walmart",       "revenue_usd": 454451, "orders": 2201, "aov_usd": 206.5 }
+    {
+      "channel": "Amazon",
+      "revenue_usd": 181425,
+      "orders": 1865,
+      "aov_usd": 97.3
+    },
+    {
+      "channel": "Mercado Libre",
+      "revenue_usd": 469606,
+      "orders": 4214,
+      "aov_usd": 111.4
+    },
+    {
+      "channel": "Walmart",
+      "revenue_usd": 454451,
+      "orders": 2201,
+      "aov_usd": 206.5
+    }
   ],
   "growth_engine": [
-    { "title": "Estrategia de demanda",      "body": "Categorías, mensajes y arquitectura de funnel para que cada dólar responda a un objetivo de negocio." },
-    { "title": "Captura de intención",       "body": "Paid Search, SEO y contenido conectados para asegurar presencia en momentos de alta intención." },
-    { "title": "Conversión y commerce",      "body": "Traducir tráfico en resultado comercial: rutas de compra, retail readiness y optimización de activos." },
-    { "title": "Inteligencia regional",      "body": "Reporting unificado, aprendizajes compartidos y decisiones que benefician a los tres mercados." }
+    {
+      "title": "Estrategia de demanda",
+      "body": "Categorías, mensajes y arquitectura de funnel para que cada dólar responda a un objetivo de negocio. Ya aplicado en Midea MX y ELC en 9 países."
+    },
+    {
+      "title": "Captura de intención",
+      "body": "Paid Search, SEO y contenido conectados para asegurar presencia en momentos de alta intención."
+    },
+    {
+      "title": "Conversión y commerce",
+      "body": "Traducir tráfico en resultado comercial: rutas de compra, retail readiness y optimización de activos."
+    },
+    {
+      "title": "Inteligencia regional",
+      "body": "Reporting unificado, aprendizajes compartidos y decisiones que benefician a los tres mercados. Misma metodología que aplicamos con 14 marcas de ELC simultáneamente."
+    }
   ],
   "countries": [
     {
-      "id": "co", "name": "Colombia", "status": "Mercado prioritario",
+      "id": "co",
+      "name": "Colombia",
+      "status": "Mercado prioritario",
       "headline": "La base ya existe. La oportunidad es activar el funnel completo.",
       "north_star": "Convertir una operación eficiente en captura de intención en un sistema completo que también construya awareness y cierre conversión.",
-      "priority_sectors": ["Aire acondicionado", "Lavado", "Cocción"],
+      "priority_sectors": [
+        "Aire acondicionado",
+        "Lavado",
+        "Cocción"
+      ],
       "signals": [
         "Paid Search ya aporta 60% del tráfico con CPC muy eficiente ($0.007 USD).",
         "37% de keywords en top 10 SEO — hay espacio claro para crecer orgánicamente.",
@@ -166,10 +232,16 @@
       }
     },
     {
-      "id": "ec", "name": "Ecuador", "status": "Expansión disciplinada",
+      "id": "ec",
+      "name": "Ecuador",
+      "status": "Expansión disciplinada",
       "headline": "Mercado nuevo, pero no empezamos desde cero.",
       "north_star": "Entrar con estructura ligera usando el playbook de Colombia y México. Probar, aprender y escalar con evidencia.",
-      "priority_sectors": ["Refrigeración", "Pequeños electrodomésticos", "Climatización"],
+      "priority_sectors": [
+        "Refrigeración",
+        "Pequeños electrodomésticos",
+        "Climatización"
+      ],
       "signals": [
         "Mercado con espacio para captura de demanda search-first.",
         "El playbook regional permite evitar experimentación innecesaria.",
@@ -189,10 +261,16 @@
       }
     },
     {
-      "id": "ve", "name": "Venezuela", "status": "Captura selectiva",
+      "id": "ve",
+      "name": "Venezuela",
+      "status": "Captura selectiva",
       "headline": "Disciplina operativa sobre volumen.",
       "north_star": "Concentrar recursos donde la intención sea más clara. Aprender rápido, escalar con criterio.",
-      "priority_sectors": ["Climatización", "Esenciales del hogar", "Reposición"],
+      "priority_sectors": [
+        "Climatización",
+        "Esenciales del hogar",
+        "Reposición"
+      ],
       "signals": [
         "La entrada debe ser basada en evidencia, no en apuestas.",
         "Climatización tiene demanda real en el mercado local.",
@@ -214,18 +292,112 @@
   ],
   "impact": {
     "scenario": [
-      { "phase": "90 días",  "base": 70,  "continuidad": 117 },
-      { "phase": "180 días", "base": 122, "continuidad": 238 },
-      { "phase": "12 meses", "base": 197, "continuidad": 359 }
+      {
+        "phase": "90 días",
+        "base": 70,
+        "continuidad": 117
+      },
+      {
+        "phase": "180 días",
+        "base": 122,
+        "continuidad": 238
+      },
+      {
+        "phase": "12 meses",
+        "base": 197,
+        "continuidad": 359
+      }
     ]
   },
   "next_steps": [
-    "Briefing del nuevo clúster: objetivos de negocio, portafolio prioritario y presupuesto indicativo para CO, EC y VE.",
-    "Propuesta económica lista en menos de una semana con plan de arranque por mercado.",
-    "Activación inmediata en Colombia: auditoría de cuentas, plan Q2 y primeras campañas en 3 semanas."
+    "Briefing del nuevo clúster: objetivos de negocio, portafolio prioritario y presupuesto indicativo para CO, EC y VE — una reunión de 60 minutos es suficiente para arrancar.",
+    "Propuesta económica detallada en menos de una semana, con desglose por servicio y por mercado — similar al scope de Expansión Digital 2026 ya presentado.",
+    "Activación inmediata en Colombia: auditoría de cuentas activas, plan Q2 completo y primeras campañas corriendo en 3 semanas."
   ],
   "closing_statement": {
     "title": "No empezamos de cero. Empezamos desde lo que ya aprendimos.",
     "body": "México funciona. Colombia tiene base. El clúster tiene una propuesta clara. Solo falta tomar la decisión."
+  },
+  "social_kpis_2025": {
+    "mexico": [
+      {
+        "label": "Alcance vs meta",
+        "value": "261%",
+        "raw": "101.9M de 39M meta"
+      },
+      {
+        "label": "Seguidores IG",
+        "value": "186%",
+        "raw": "22,378 de 12,000 meta"
+      },
+      {
+        "label": "Seguidores FB",
+        "value": "101%",
+        "raw": "146,765 de 146,000 meta"
+      },
+      {
+        "label": "Sesiones web",
+        "value": "624%",
+        "raw": "1.09M de 176,000 meta"
+      }
+    ],
+    "colombia": [
+      {
+        "label": "Alcance total 2025",
+        "value": "10.1M",
+        "raw": "52% de meta — sin presupuesto propio"
+      },
+      {
+        "label": "Seguidores IG",
+        "value": "+331%",
+        "raw": "15,890 vs meta 4,800"
+      },
+      {
+        "label": "Seguidores FB",
+        "value": "+133%",
+        "raw": "124,567 vs meta 94,000"
+      },
+      {
+        "label": "Sesiones web",
+        "value": "+107%",
+        "raw": "55,812 vs meta 52,400"
+      }
+    ]
+  },
+  "elc_case": {
+    "headline": "La misma capacidad que construimos para Estée Lauder, disponible para Midea.",
+    "years_together": 13,
+    "brands": 14,
+    "countries": 9,
+    "hours_fy25": 6800,
+    "retailers_operated": 30,
+    "brand_protection": [
+      {
+        "period": "Jul–Sep 2025",
+        "total": 807,
+        "removed": 647,
+        "effectiveness": 0.8017
+      },
+      {
+        "period": "Oct–Dic 2025",
+        "total": 568,
+        "removed": 519,
+        "effectiveness": 0.9137
+      },
+      {
+        "period": "Ene–Mar 2026",
+        "total": 174,
+        "removed": 140,
+        "effectiveness": 0.8046
+      }
+    ],
+    "monthly_deliverables": {
+      "social_accounts": 23,
+      "websites": 5,
+      "marketplaces": 5,
+      "production_hours": 750,
+      "pieces": 400
+    },
+    "note": "Los datos de ELC son reales y corresponden al scope actual de Riot con el grupo. Se presentan como referencia de capacidad operativa, no como propuesta para Midea."
   }
 }
