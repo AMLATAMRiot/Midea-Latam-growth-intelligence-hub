@@ -46,12 +46,14 @@ const axisTick = { fill: "#737373", fontSize: 11, fontFamily: "Manrope" };
 
 /* ─── nav ─────────────────────────────────────────────────────────── */
 const NAV = [
-  { id: "hero",    label: "Inicio" },
-  { id: "mexico",  label: "México" },
-  { id: "colombia",label: "Colombia" },
-  { id: "cluster", label: "Clúster" },
-  { id: "funnel",  label: "Propuesta" },
-  { id: "cierre",  label: "Siguiente paso" }
+  { id: "hero",       label: "Inicio" },
+  { id: "mexico",     label: "México" },
+  { id: "colombia",   label: "Colombia" },
+  { id: "cluster",    label: "Clúster" },
+  { id: "proyeccion", label: "Proyección" },
+  { id: "servicios",  label: "Servicios" },
+  { id: "funnel",     label: "Propuesta" },
+  { id: "cierre",     label: "Siguiente paso" }
 ];
 
 /* ─── App ─────────────────────────────────────────────────────────── */
@@ -431,8 +433,295 @@ function App() {
         </${Sec}>
 
 
+
+
         <!-- ══════════════════════════════════════════════
-             05  FUNNEL COMPLETO — propuesta
+             05  PROYECCIÓN INVERSIÓN → VENTAS
+        ══════════════════════════════════════════════ -->
+        <${Sec} id="proyeccion">
+          <${SectionLabel} eyebrow="Proyección · Basada en datos reales de México" />
+          <h2 class="mt-4 max-w-4xl font-serif text-5xl leading-tight text-white md:text-6xl">
+            Con una inversión de X, se proyectan Y en ventas.
+          </h2>
+          <p class="mt-6 max-w-3xl text-base leading-8 text-neutral-300">
+            Esta proyección usa los ratios reales de México en Q1 2026 como referencia. Colombia es un mercado menos maduro, por lo que aplicamos un descuento conservador. Los números representan un escenario realista, no una garantía.
+          </p>
+
+          <!-- MX benchmark real first -->
+          <div class="mt-10 rounded-[28px] border border-[#f2c230]/20 bg-[#f2c230]/06 px-7 py-6">
+            <p class="text-xs uppercase tracking-[0.32em] text-[#f2c230]">Base: Resultados reales México Q1 2026</p>
+            <div class="mt-4 grid gap-4 sm:grid-cols-4">
+              ${[
+                { label: "Inversión paid Q1", value: "$19.5K USD", note: "Total ejecutado en el trimestre" },
+                { label: "Ingresos generados", value: "$253.8K USD", note: "Solo vía paid media" },
+                { label: "ROAS general", value: "13×", note: "Inversión vs ingresos totales" },
+                { label: "ROAS conversión", value: "20.7×", note: "Solo campañas de conversión directa" }
+              ].map(m => html`
+                <div key=${m.label} class="rounded-[20px] bg-black/30 border border-white/10 p-5">
+                  <p class="text-[10px] uppercase tracking-[0.28em] text-neutral-500">${m.label}</p>
+                  <p class="mt-2 text-2xl font-semibold text-[#f2c230]">${m.value}</p>
+                  <p class="mt-1 text-xs text-neutral-500">${m.note}</p>
+                </div>
+              `)}
+            </div>
+          </div>
+
+          <!-- Projection scenarios for cluster -->
+          <p class="mt-10 text-xs uppercase tracking-[0.32em] text-neutral-500">Proyección para Colombia · Escenario conservador (descuento 40% vs MX)</p>
+          <div class="mt-4 grid gap-5 lg:grid-cols-3">
+            ${[
+              {
+                level: "Entrada",
+                invest: 2000,
+                roas_applied: 7.8,
+                revenue: 15600,
+                note: "Presupuesto similar al Q1 actual de CO. Funnel solo consideración → primera capa de conversión.",
+                badge: "Inmediato · Q2 2026"
+              },
+              {
+                level: "Crecimiento",
+                invest: 5000,
+                roas_applied: 9.1,
+                revenue: 45500,
+                note: "Activación de awareness + conversión. Lógica de funnel completo, aprendizajes de MX aplicados.",
+                badge: "Recomendado · Q3 2026"
+              },
+              {
+                level: "Escala regional",
+                invest: 12000,
+                roas_applied: 10.4,
+                revenue: 124800,
+                note: "CO + inicio EC y VE. ROAS sube conforme maduran las audiencias y el modelo se afina.",
+                badge: "Horizonte 12 meses"
+              }
+            ].map((s, i) => html`
+              <${motion.div} key=${s.level}
+                class=${"floating-card glass-panel rounded-[32px] border p-7 shadow-xl " + (i===1 ? "border-[#f2c230]/40" : "border-white/10")}
+                initial=${{ opacity:0, y:20 }} whileInView=${{ opacity:1, y:0 }}
+                viewport=${{ once:true }} transition=${{ duration:0.5, delay: i*0.12 }}>
+                ${i===1 && html`<div class="mb-4 inline-block rounded-full bg-[#f2c230] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-black">Recomendado</div>`}
+                <p class="text-[10px] uppercase tracking-[0.32em] text-neutral-500">Escenario ${s.level}</p>
+                <div class="mt-4 flex items-end gap-3">
+                  <div>
+                    <p class="text-xs text-neutral-500">Inversión mensual</p>
+                    <p class="text-3xl font-semibold text-white">${fmt.usd(s.invest)}</p>
+                  </div>
+                  <div class="mb-1 text-neutral-600 text-lg">→</div>
+                  <div>
+                    <p class="text-xs text-neutral-500">Ingresos proyectados</p>
+                    <p class="text-3xl font-semibold text-[#f2c230]">${fmt.usd(s.revenue)}</p>
+                  </div>
+                </div>
+                <div class="mt-4 rounded-[16px] bg-white/5 border border-white/10 px-4 py-3">
+                  <p class="text-xs text-neutral-400 leading-5">ROAS proyectado: <span class="font-semibold text-white">${s.roas_applied}×</span> · ${s.badge}</p>
+                </div>
+                <p class="mt-4 text-xs leading-6 text-neutral-500">${s.note}</p>
+              </ ${motion.div}>
+            `)}
+          </div>
+
+          <div class="mt-6 rounded-[22px] border border-white/10 bg-white/5 px-6 py-5">
+            <p class="text-xs text-neutral-500 leading-6">
+              <span class="font-semibold text-neutral-300">Nota metodológica:</span> Los ingresos proyectados corresponden a <span class="text-white font-semibold">ventas de productos Midea</span> (e-commerce y retail digital), no a la inversión en la agencia. El ROAS aplicado a Colombia es un 40% menor al ROAS real de México para reflejar la menor madurez del mercado. A medida que el modelo madura, el ROAS mejora — eso es exactamente lo que pasó en México.
+            </p>
+          </div>
+        </ ${Sec}>
+
+
+        <!-- ══════════════════════════════════════════════
+             06  SERVICIOS RIOT
+        ══════════════════════════════════════════════ -->
+        <${Sec} id="servicios">
+          <${SectionLabel} eyebrow="Riot · 14 años de experiencia" />
+          <h2 class="mt-4 max-w-4xl font-serif text-5xl leading-tight text-white md:text-6xl">
+            Todo lo que podemos hacer por Midea.
+          </h2>
+          <p class="mt-6 max-w-3xl text-base leading-8 text-neutral-300">
+            No somos una agencia de redes sociales. Somos un socio de crecimiento digital con capacidades end-to-end: desde la estrategia hasta la ejecución técnica, desde el contenido hasta el commerce.
+          </p>
+
+          <!-- Regional experience callout -->
+          <div class="mt-8 rounded-[28px] border border-[#f2c230]/25 bg-[#f2c230]/08 px-7 py-6 flex flex-wrap items-center gap-6">
+            <div class="flex-1 min-w-[200px]">
+              <p class="text-xs uppercase tracking-[0.32em] text-[#f2c230]">Presencia regional activa</p>
+              <p class="mt-2 text-xl font-semibold text-white leading-snug">Operamos hoy en Venezuela y Ecuador con otras marcas.</p>
+              <p class="mt-2 text-sm text-neutral-400 leading-6">No llegamos a estos mercados sin conocerlos. Ya tenemos equipos locales, aprendizajes de media y conocimiento del consumidor en los dos países donde el nuevo clúster de Midea necesita crecer.</p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              ${["🇻🇪 Venezuela · activo", "🇪🇨 Ecuador · activo", "🇨🇴 Colombia · activo", "🇲🇽 México · activo", "🇵🇪 Perú · activo"].map(tag => html`
+                <span key=${tag} class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold text-neutral-300">${tag}</span>
+              `)}
+            </div>
+          </div>
+
+          <!-- Service pillars -->
+          <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            ${[
+              {
+                cat: "Ecosistemas digitales",
+                icon: "🌐",
+                title: "Sitios web y e-commerce",
+                items: [
+                  "Gestión de plataformas en MX, CO, PE, CA y EC",
+                  "Consultoría para tiendas oficiales de marca",
+                  "Corrección de bugs, tracking y soporte técnico",
+                  "Soporte a landings de performance"
+                ]
+              },
+              {
+                cat: "Ecosistemas digitales",
+                icon: "📱",
+                title: "Community management y redes sociales",
+                items: [
+                  "Meta (Facebook e Instagram), TikTok, YouTube",
+                  "Diseño de parrilla editorial y publicación",
+                  "Social care y atención a comunidad",
+                  "Reporteo mensual multi-país"
+                ]
+              },
+              {
+                cat: "Ecosistemas digitales",
+                icon: "📊",
+                title: "Estrategia y analytics",
+                items: [
+                  "Medición con plataformas especializadas",
+                  "Generación de reportes ejecutivos",
+                  "Recomendaciones para optimizar activos",
+                  "Dashboard de performance en tiempo real"
+                ]
+              },
+              {
+                cat: "Ecosistemas digitales",
+                icon: "🔍",
+                title: "SEO avanzado",
+                items: [
+                  "Optimización para buscadores tradicionales",
+                  "SEO en Marketplaces (Amazon, ML, Walmart)",
+                  "Visibilidad en IA Overviews y LLMs",
+                  "Posicionamiento en ChatGPT y Gemini"
+                ]
+              },
+              {
+                cat: "Ecosistemas digitales",
+                icon: "🤳",
+                title: "Influence marketing",
+                items: [
+                  "Estrategia, planeación y búsqueda de creadores",
+                  "Contratación y gestión de contratos",
+                  "Producción de materiales y briefs creativos",
+                  "Medición y reporte de campaña"
+                ]
+              },
+              {
+                cat: "Marketplaces & Growth",
+                icon: "🛒",
+                title: "Retailer maintenance",
+                items: [
+                  "Alta, baja y actualización de productos",
+                  "Administración de ofertas y banners",
+                  "Amazon, Mercado Libre, Walmart, Liverpool",
+                  "Home Depot y TikTok Shop"
+                ]
+              },
+              {
+                cat: "Marketplaces & Growth",
+                icon: "📈",
+                title: "Paid media de conversión",
+                items: [
+                  "Campañas dinámicas 24/7 en marketplaces",
+                  "Foco en conversión y compra directa",
+                  "Optimización continua por plataforma",
+                  "ROAS tracking en tiempo real"
+                ]
+              },
+              {
+                cat: "Producción e innovación",
+                icon: "🎬",
+                title: "Producción audiovisual",
+                items: [
+                  "Imágenes, reels, stories y videos cortos",
+                  "Banners para activos digitales y RRSS",
+                  "Contenido adaptado por mercado y plataforma",
+                  "Producción local con visión de marca global"
+                ]
+              },
+              {
+                cat: "Producción e innovación",
+                icon: "🤖",
+                title: "AI Lab",
+                items: [
+                  "Escenarios virtuales con producto mediante IA generativa",
+                  "Múltiples variantes de imagen desde una sola toma",
+                  "Reemplazo de productos en imágenes existentes",
+                  "Análisis predictivo del comportamiento del cliente"
+                ]
+              },
+              {
+                cat: "Consultoría especializada",
+                icon: "🗄️",
+                title: "PIM · Gestión de información de producto",
+                items: [
+                  "Integración de plataformas tecnológicas",
+                  "Centralización de activos y atributos de producto",
+                  "Reducción del tiempo de Go To Market",
+                  "Consistencia de catálogo en todos los canales"
+                ]
+              },
+              {
+                cat: "Consultoría especializada",
+                icon: "🛡️",
+                title: "Brand protection",
+                items: [
+                  "Análisis y control de Grey Market",
+                  "Protección de propiedad intelectual (PPI)",
+                  "Denuncias en Mercado Libre y otros marketplaces",
+                  "Monitoreo continuo de revendedores no autorizados"
+                ]
+              }
+            ].map((svc, i) => html`
+              <${motion.div} key=${svc.title}
+                class="signal-card glass-panel rounded-[28px] border border-white/10 p-6 shadow-xl"
+                initial=${{ opacity:0, y:16 }} whileInView=${{ opacity:1, y:0 }}
+                viewport=${{ once:true }} transition=${{ duration:0.4, delay: (i%3)*0.08 }}>
+                <div class="flex items-start justify-between gap-3 mb-4">
+                  <div>
+                    <p class="text-[9px] uppercase tracking-[0.3em] text-neutral-600">${svc.cat}</p>
+                    <div class="flex items-center gap-2 mt-1.5">
+                      <span class="text-xl">${svc.icon}</span>
+                      <p class="text-sm font-semibold text-white leading-snug">${svc.title}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  ${svc.items.map(item => html`
+                    <div key=${item} class="flex items-start gap-2 text-xs leading-5 text-neutral-400">
+                      <span class="mt-1 flex-shrink-0 w-1 h-1 rounded-full bg-[#f2c230] opacity-60"></span>
+                      ${item}
+                    </div>
+                  `)}
+                </div>
+              </ ${motion.div}>
+            `)}
+          </div>
+
+          <!-- 14 years proof bar -->
+          <div class="mt-8 grid gap-4 sm:grid-cols-4">
+            ${[
+              { n: "14", label: "años de experiencia" },
+              { n: "5+", label: "países operando hoy" },
+              { n: "360°", label: "capacidades cubiertas" },
+              { n: "1", label: "equipo, visión regional" }
+            ].map(p => html`
+              <div key=${p.label} class="rounded-[22px] border border-white/10 bg-white/5 px-5 py-5 text-center">
+                <p class="text-4xl font-semibold text-[#f2c230]">${p.n}</p>
+                <p class="mt-2 text-xs text-neutral-500 uppercase tracking-[0.2em]">${p.label}</p>
+              </div>
+            `)}
+          </div>
+        </ ${Sec}>
+
+        <!-- ══════════════════════════════════════════════
+             07  FUNNEL COMPLETO — propuesta
         ══════════════════════════════════════════════ -->
         <${Sec} id="funnel">
           <${SectionLabel} eyebrow="Propuesta · Funnel 360°" />
